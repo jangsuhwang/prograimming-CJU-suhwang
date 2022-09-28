@@ -14,7 +14,7 @@ int main(void)
 
 	printf("input info (weight,height):");   //  몸무게,키 입력 안내 메시지 출력
 
-	scanf_s("%lf%lf", &weight, &height); // 실제 입력 몸무게,키 입력하기 위한 변환 문자 %lf 사용
+	scanf_s("%lf%lf", &weight, &height); // weight, height 입력 변수 설정 %lf 소수점 6자리//
 
 	bmi = weight / ((height * CM2M) * (height * CM2M)); // bmi 연산
 

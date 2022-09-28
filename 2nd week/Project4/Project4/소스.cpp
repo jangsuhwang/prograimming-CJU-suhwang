@@ -10,9 +10,9 @@ int main(void)
 
 {
 
-	double height = 0.0, weight = 0.0, bmi = 0.0;  // Double 변수로 선언 쓰레기값 없앰
+	double height = 0.0, weight = 0.0, bmi = 0.0;  // Double 각 변수 초기값 설정//
 
-	printf("input info (weight,height):");   //  몸무게,키 안내 메시지 출력
+	printf("input info (weight,height):");   //  몸무게,키 입력 안내 메시지 출력
 
 	scanf_s("%lf%lf", &weight, &height); // 실제 입력 몸무게,키 입력하기 위한 변환 문자 %lf 사용
 

@@ -1,4 +1,4 @@
-#include<stdio.h>
+/*#include<stdio.h>
 
 #define MINPRIMENUM 2 // 약수가 1과 자기 자신뿐인 자연수에 대한 기준이 되는 개수의 숫자 2를 정의//
 #define MAXNUM 5      // 한줄에 5개의 소수가 출력하기 위한 기준이되는 숫자 정의//
@@ -33,5 +33,62 @@ int main()
 		dividecount = 0; // 13행으로 가서 반복 되기전 약수 개수 초기화 
 	}
 
+	return 0;
+}*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define END_COND 999
+#define lotto_MAX 6
+
+// generating the seed number using the time clock information
+void GenRandSeed()
+{
+	// generating the random number using the time seed
+	srand((unsigned int)(time(NULL)));
+	return;
+}
+
+// generating the random number
+unsigned int GenRandNum(unsigned int nRange)
+{
+	unsigned int nRes = 0;
+	unsigned int nNum = rand();
+	nRes = ((unsigned int)(nNum) % (nRange));
+	return nRes;
+}
+int a, b, c, d, e, f;
+
+int main(void)
+{
+	// assigning seedg
+	GenRandSeed();
+
+	// initializing variables
+	int nRange = 45;
+	int random_num[lotto_MAX];
+	int test[lotto_MAX];
+	int collect_count = 0;
+
+	for (int i = 0; i < lotto_MAX; i++) {
+		random_num[i] = GenRandNum(nRange);
+		printf("\n\n숫자를 입력해주세요 :  ");
+		scanf_s("%d", &test[i]);
+	}
+	for (int i = 0; i < lotto_MAX; i++) {
+		printf("\n%d // %d\n", random_num[i], test[i]);
+	}
+
+	for (int i = 0; i < lotto_MAX; i++) {
+		for (int j = 0; j < lotto_MAX; j++) {
+			if (random_num[i] == test[j]) {
+				collect_count = collect_count + 1;
+				printf("%d번째 일치, %d번째 번호 %d와 %d번째 번호 %d가 일치합니다", collect_count[i], i, random_num, j, test[j]);
+			}
+		}
+	}
+	system("pause");
 	return 0;
 }

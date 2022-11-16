@@ -1,40 +1,3 @@
-/*#include<stdio.h>
-
-#define MINPRIMENUM 2 // ¾à¼ö°¡ 1°ú ÀÚ±â ÀÚ½Å»ÓÀÎ ÀÚ¿¬¼ö¿¡ ´ëÇÑ ±âÁØÀÌ µÇ´Â °³¼öÀÇ ¼ıÀÚ 2¸¦ Á¤ÀÇ//
-#define MAXNUM 5      // ÇÑÁÙ¿¡ 5°³ÀÇ ¼Ò¼ö°¡ Ãâ·ÂÇÏ±â À§ÇÑ ±âÁØÀÌµÇ´Â ¼ıÀÚ Á¤ÀÇ//
-int main()
-{
-	int num;              // ¾çÀÇ Á¤¼ö±¸°£¿¡¼­ 2ºÎÅÍ ÀÔ·ÂÇÑ ±¸°£ »çÀÌ¿¡ ¼Ò¼ö¸¦ ±¸ÇÏ±â À§ÇÑ º¯¼ö num ¼±¾ğ  
-	int dividecount = 0; // ¾à¼ö °¹¼ö dividecount º¯¼ö ÃÊ±âÈ­
-	int counter = 1;    // Ã£Àº ¼Ò¼öÀÇ °¹¼ö counter=1 ·Î º¯¼ö ÃÊ±âÈ­
-
-	printf("input over 2 number\n"); // ¹üÀ§¸¦ °áÁ¤ÇÏ´Â ¼ıÀÚ ÀÔ·Â¾È³» ¸Ş½ÃÁö//
-	scanf_s("%d", &num);             // ¹üÀ§¸¦ Á¤ÇØÁÖ´Â º¯¼öÀÔ·Â //
-	for (int i = 1; i <= num; i++)   // i¸¦ 1ºÎÅÍ i <= num Á¶°ÇÀÌ ¸¸Á·ÇÏ´Â ÇÑ ¹İº¹ ½ÃÇà//
-	{
-		for (int j = 1 ;j <= i; j++) // iÁ¶°ÇÀÌ ¸¸Á·ÇßÀ»¶§ ¸¶Âù°¡Áö·Î j <= i ¸¸Á·ÇÏ´Â ÇÑ ½ÃÇà (for ÁßÃ¸)//
-		{
-			if (i % j==0)            // i/j ÀÏ¶§ ³ª¸ÓÁö°¡ 0 ÀÌ¸é ¾à¼ö °¹¼ö +1
-			{
-				dividecount = dividecount + 1;
-			}
-
-		}
-	if (dividecount == MINPRIMENUM)  // ¾à¼ö°¡ 2°³ ¶ó´Â °ÍÀº  1°ú ÀÚ½Å¸¸ ¾à¼ö¶ó´Â °ÍÀÓÀ¸·Î ¼Ò¼ö ÀÌ¹Ç·Î ¼ıÀÚ Ãâ·Â ±×¸®°í counter °ª +1       *1Àº ÀÚ½Åµµ 1ÀÌ±â¶§¹®¿¡ dividecount!==2 ¾ÈµÇ¾î ¾îÃ³ÇÇ Ãâ·Â¾ÈµÊ //
-		{
-			printf("%d    ", i);
-			counter = counter + 1;
-		}
-	if (counter>MAXNUM)                // counter º¯¼ö°ªÀÌ 6ÀÌµÇ¸é ÇÑÁÙ ³»·Á°¡¼­ Ãâ·Â ±×¸®°í counter º¯¼ö°ª 1·Î ÃÊ±âÈ­
-		{
-			counter = 1;
-			printf("\n");
-		}
-		dividecount = 0; // 13ÇàÀ¸·Î °¡¼­ ¹İº¹ µÇ±âÀü ¾à¼ö °³¼ö ÃÊ±âÈ­ 
-	}
-
-	return 0;
-}*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -74,7 +37,7 @@ int main(void)
 
 	for (int i = 0; i < lotto_MAX; i++) {
 		random_num[i] = GenRandNum(nRange);
-		printf("\n\n¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä :  ");
+		printf("\n\nìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” :  ");
 		scanf_s("%d", &test[i]);
 	}
 	for (int i = 0; i < lotto_MAX; i++) {
@@ -85,7 +48,7 @@ int main(void)
 		for (int j = 0; j < lotto_MAX; j++) {
 			if (random_num[i] == test[j]) {
 				collect_count = collect_count + 1;
-				printf("%d¹øÂ° ÀÏÄ¡, %d¹øÂ° ¹øÈ£ %d¿Í %d¹øÂ° ¹øÈ£ %d°¡ ÀÏÄ¡ÇÕ´Ï´Ù", collect_count[i], i, random_num, j, test[j]);
+				printf("%dë²ˆì§¸ ì¼ì¹˜, %dë²ˆì§¸ ë²ˆí˜¸ %dì™€ %dë²ˆì§¸ ë²ˆí˜¸ %dê°€ ì¼ì¹˜í•©ë‹ˆë‹¤", collect_count[i], i, random_num, j, test[j]);
 			}
 		}
 	}

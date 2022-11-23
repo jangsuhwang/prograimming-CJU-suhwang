@@ -1,94 +1,35 @@
-/*#include<stdio.h>
-
-#define MINPRIMENUM 2 // ¾à¼ö°¡ 1°ú ÀÚ±â ÀÚ½Å»ÓÀÎ ÀÚ¿¬¼ö¿¡ ´ëÇÑ ±âÁØÀÌ µÇ´Â °³¼öÀÇ ¼ıÀÚ 2¸¦ Á¤ÀÇ//
-#define MAXNUM 5      // ÇÑÁÙ¿¡ 5°³ÀÇ ¼Ò¼ö°¡ Ãâ·ÂÇÏ±â À§ÇÑ ±âÁØÀÌµÇ´Â ¼ıÀÚ Á¤ÀÇ//
-int main()
-{
-	int num;              // ¾çÀÇ Á¤¼ö±¸°£¿¡¼­ 2ºÎÅÍ ÀÔ·ÂÇÑ ±¸°£ »çÀÌ¿¡ ¼Ò¼ö¸¦ ±¸ÇÏ±â À§ÇÑ º¯¼ö num ¼±¾ğ  
-	int dividecount = 0; // ¾à¼ö °¹¼ö dividecount º¯¼ö ÃÊ±âÈ­
-	int counter = 1;    // Ã£Àº ¼Ò¼öÀÇ °¹¼ö counter=1 ·Î º¯¼ö ÃÊ±âÈ­
-
-	printf("input over 2 number\n"); // ¹üÀ§¸¦ °áÁ¤ÇÏ´Â ¼ıÀÚ ÀÔ·Â¾È³» ¸Ş½ÃÁö//
-	scanf_s("%d", &num);             // ¹üÀ§¸¦ Á¤ÇØÁÖ´Â º¯¼öÀÔ·Â //
-	for (int i = 1; i <= num; i++)   // i¸¦ 1ºÎÅÍ i <= num Á¶°ÇÀÌ ¸¸Á·ÇÏ´Â ÇÑ ¹İº¹ ½ÃÇà//
+#define MINPRIMENUM 2 // ì•½ìˆ˜ê°€ 1ê³¼ ìê¸° ìì‹ ë¿ì¸ ìì—°ìˆ˜ì— ëŒ€í•œ ê¸°ì¤€ì´ ë˜ëŠ” ê°œìˆ˜ì˜ ìˆ«ì 2ë¥¼ ì •ì˜//
+#define MAXNUM 5      // í•œì¤„ì— 5ê°œì˜ ì†Œìˆ˜ê°€ ì¶œë ¥í•˜ê¸° ìœ„í•œ ê¸°ì¤€ì´ë˜ëŠ” ìˆ«ì ì •ì˜//
+	int main()
 	{
-		for (int j = 1 ;j <= i; j++) // iÁ¶°ÇÀÌ ¸¸Á·ÇßÀ»¶§ ¸¶Âù°¡Áö·Î j <= i ¸¸Á·ÇÏ´Â ÇÑ ½ÃÇà (for ÁßÃ¸)//
+		int num;              // ì–‘ì˜ ì •ìˆ˜êµ¬ê°„ì—ì„œ 2ë¶€í„° ì…ë ¥í•œ êµ¬ê°„ ì‚¬ì´ì— ì†Œìˆ˜ë¥¼ êµ¬í•˜ê¸° ìœ„í•œ ë³€ìˆ˜ num ì„ ì–¸  
+		int dividecount = 0; // ì•½ìˆ˜ ê°¯ìˆ˜ dividecount ë³€ìˆ˜ ì´ˆê¸°í™”
+		int counter = 1;    // ì°¾ì€ ì†Œìˆ˜ì˜ ê°¯ìˆ˜ counter=1 ë¡œ ë³€ìˆ˜ ì´ˆê¸°í™”
+
+		printf("input over 2 number\n"); // ë²”ìœ„ë¥¼ ê²°ì •í•˜ëŠ” ìˆ«ì ì…ë ¥ì•ˆë‚´ ë©”ì‹œì§€//
+		scanf_s("%d", &num);             // ë²”ìœ„ë¥¼ ì •í•´ì£¼ëŠ” ë³€ìˆ˜ì…ë ¥ //
+		for (int i = 1; i <= num; i++)   // ië¥¼ 1ë¶€í„° i <= num ì¡°ê±´ì´ ë§Œì¡±í•˜ëŠ” í•œ ë°˜ë³µ ì‹œí–‰//
 		{
-			if (i % j==0)            // i/j ÀÏ¶§ ³ª¸ÓÁö°¡ 0 ÀÌ¸é ¾à¼ö °¹¼ö +1
+			for (int j = 1; j <= i; j++) // iì¡°ê±´ì´ ë§Œì¡±í–ˆì„ë•Œ ë§ˆì°¬ê°€ì§€ë¡œ j <= i ë§Œì¡±í•˜ëŠ” í•œ ì‹œí–‰ (for ì¤‘ì²©)//
 			{
-				dividecount = dividecount + 1;
+				if (i % j == 0)            // i/j ì¼ë•Œ ë‚˜ë¨¸ì§€ê°€ 0 ì´ë©´ ì•½ìˆ˜ ê°¯ìˆ˜ +1
+				{
+					dividecount = dividecount + 1;
+				}
+
 			}
-
-		}
-	if (dividecount == MINPRIMENUM)  // ¾à¼ö°¡ 2°³ ¶ó´Â °ÍÀº  1°ú ÀÚ½Å¸¸ ¾à¼ö¶ó´Â °ÍÀÓÀ¸·Î ¼Ò¼ö ÀÌ¹Ç·Î ¼ıÀÚ Ãâ·Â ±×¸®°í counter °ª +1       *1Àº ÀÚ½Åµµ 1ÀÌ±â¶§¹®¿¡ dividecount!==2 ¾ÈµÇ¾î ¾îÃ³ÇÇ Ãâ·Â¾ÈµÊ //
-		{
-			printf("%d    ", i);
-			counter = counter + 1;
-		}
-	if (counter>MAXNUM)                // counter º¯¼ö°ªÀÌ 6ÀÌµÇ¸é ÇÑÁÙ ³»·Á°¡¼­ Ãâ·Â ±×¸®°í counter º¯¼ö°ª 1·Î ÃÊ±âÈ­
-		{
-			counter = 1;
-			printf("\n");
-		}
-		dividecount = 0; // 13ÇàÀ¸·Î °¡¼­ ¹İº¹ µÇ±âÀü ¾à¼ö °³¼ö ÃÊ±âÈ­ 
-	}
-
-	return 0;
-}*/
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-#define END_COND 999
-#define lotto_MAX 6
-
-// generating the seed number using the time clock information
-void GenRandSeed()
-{
-	// generating the random number using the time seed
-	srand((unsigned int)(time(NULL)));
-	return;
-}
-
-// generating the random number
-unsigned int GenRandNum(unsigned int nRange)
-{
-	unsigned int nRes = 0;
-	unsigned int nNum = rand();
-	nRes = ((unsigned int)(nNum) % (nRange));
-	return nRes;
-}
-int a, b, c, d, e, f;
-
-int main(void)
-{
-	// assigning seedg
-	GenRandSeed();
-
-	// initializing variables
-	int nRange = 45;
-	int random_num[lotto_MAX];
-	int test[lotto_MAX];
-	int collect_count = 0;
-
-	for (int i = 0; i < lotto_MAX; i++) {
-		random_num[i] = GenRandNum(nRange);
-		printf("\n\n¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä :  ");
-		scanf_s("%d", &test[i]);
-	}
-	for (int i = 0; i < lotto_MAX; i++) {
-		printf("\n%d // %d\n", random_num[i], test[i]);
-	}
-
-	for (int i = 0; i < lotto_MAX; i++) {
-		for (int j = 0; j < lotto_MAX; j++) {
-			if (random_num[i] == test[j]) {
-				collect_count = collect_count + 1;
-				printf("%d¹øÂ° ÀÏÄ¡, %d¹øÂ° ¹øÈ£ %d¿Í %d¹øÂ° ¹øÈ£ %d°¡ ÀÏÄ¡ÇÕ´Ï´Ù", collect_count[i], i, random_num, j, test[j]);
+			if (dividecount == MINPRIMENUM)  // ì•½ìˆ˜ê°€ 2ê°œ ë¼ëŠ” ê²ƒì€  1ê³¼ ìì‹ ë§Œ ì•½ìˆ˜ë¼ëŠ” ê²ƒì„ìœ¼ë¡œ ì†Œìˆ˜ ì´ë¯€ë¡œ ìˆ«ì ì¶œë ¥ ê·¸ë¦¬ê³  counter ê°’ +1       *1ì€ ìì‹ ë„ 1ì´ê¸°ë•Œë¬¸ì— dividecount!==2 ì•ˆë˜ì–´ ì–´ì²˜í”¼ ì¶œë ¥ì•ˆë¨ //
+			{
+				printf("%d    ", i);
+				counter = counter + 1;
 			}
+			if (counter > MAXNUM)                // counter ë³€ìˆ˜ê°’ì´ 6ì´ë˜ë©´ í•œì¤„ ë‚´ë ¤ê°€ì„œ ì¶œë ¥ ê·¸ë¦¬ê³  counter ë³€ìˆ˜ê°’ 1ë¡œ ì´ˆê¸°í™”
+			{
+				counter = 1;
+				printf("\n");
+			}
+			dividecount = 0; // 13í–‰ìœ¼ë¡œ ê°€ì„œ ë°˜ë³µ ë˜ê¸°ì „ ì•½ìˆ˜ ê°œìˆ˜ ì´ˆê¸°í™” 
 		}
+
+		return 0;
 	}
-	system("pause");
-	return 0;
-}

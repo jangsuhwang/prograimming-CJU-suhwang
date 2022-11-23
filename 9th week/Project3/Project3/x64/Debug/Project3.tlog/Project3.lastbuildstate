@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.33.31629:TargetPlatformVersion=10.0.19041.0:
 Debug|x64|C:\Users\gl317\OneDrive\문서\GitHub\prograimming-CJU-suhwang\Project3\|
+=======
+PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.33.31629:TargetPlatformVersion=10.0.19041.0:
+Debug|x64|C:\Users\gl317\OneDrive\문서\GitHub\prograimming-CJU-suhwang\Project3\|
+>>>>>>> fe3343b5d54882f723900ae69d7cbacab76999f3

@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\project 1",
-    "\\project 1\\project 1"
+    "\\project 2\\project 2",
+    "\\Project3",
+    "\\Project3\\Project3"
   ],
-  "SelectedNode": "\\project 1\\project 1",
+  "SelectedNode": "\\Project3\\Project3\\소스.cpp",
   "PreviewInSolutionExplorer": false
 }
